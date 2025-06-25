@@ -1,0 +1,62 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: var(--modal-bg, rgba(40,40,40,0.08));
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.note-editor-modal {
+  background: #fff;
+  max-width: 440px;
+  width: 97vw;
+  border-radius: 11px;
+  box-shadow: 0 4px 19px 0 rgba(25,88,210,.13);
+  padding: 28px 30px 23px 30px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: popIn .23s cubic-bezier(.42,0,.14,1.36);
+}
+@keyframes popIn {
+  0% { transform: scale(.94);}
+  100% { transform: scale(1);}
+}
+.note-editor-modal h2 {
+  margin: 0 0 6px 0;
+  color: var(--primary,#1976d2);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: var(--primary,#1976d2);
+  margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #e0e6f3;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  font-family: inherit;
+}
+.btn.btn-primary {
+  background-color: var(--primary,#1976d2);
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background: #135aa0;
+}
+.btn.btn-secondary {
+  background: #ececec;
+  color: #555;
+}
+.btn.btn-secondary:hover {
+  background: #ddd;
+}
